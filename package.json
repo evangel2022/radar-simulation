@@ -1,0 +1,36 @@
+{
+  "name": "radar-simulation",
+  "version": "1.0.0",
+  "description": "AN/SPY-6(V) Aegis Combat System — Web-based Naval Air & Missile Defense Radar Simulator",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "serve": "python -m http.server 8080 --directory .",
+    "lint": "npx html-validate index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evangel2022/radar-simulation.git"
+  },
+  "keywords": [
+    "radar",
+    "simulation",
+    "aegis",
+    "spy-6",
+    "military",
+    "defense",
+    "web-audio",
+    "canvas",
+    "vanilla-js",
+    "no-framework"
+  ],
+  "author": "Radar Simulation Contributors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/evangel2022/radar-simulation/issues"
+  },
+  "homepage": "https://github.com/evangel2022/radar-simulation#readme",
+  "devDependencies": {
+    "html-validate": "^8.0.0"
+  }
+}
