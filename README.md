@@ -1,131 +1,128 @@
-<div align="center">
+# AN/SPY-6(V) 宙斯盾作战系统 — 雷达仿真
 
-[![中文](https://img.shields.io/badge/README-%E4%B8%AD%E6%96%87-red?style=flat-square)](README_CN.md)
-
-</div>
-
-<br>
-
-# AN/SPY-6(V) Aegis Combat System — Radar Simulation
-
-> Web-based Naval Air & Missile Defense Radar Simulator
+> 现代海基防空反导雷达仿真系统
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-brightgreen)](https://evangel2022.github.io/radar-simulation/)
 [![CI](https://github.com/evangel2022/radar-simulation/actions/workflows/ci.yml/badge.svg)](https://github.com/evangel2022/radar-simulation/actions/workflows/ci.yml)
 
-An interactive, pure-frontend radar simulation system built with web technologies. Models the U.S. Navy Aegis Combat System and AN/SPY-6(V) phased array radar with full visualization of multi-target detection, tracking, classification, and the lock-designate-engage-intercept engagement workflow.
+<p align="center">
+    <a href="README.md">简体中文</a> |
+    <a href="README_EN.md">English</a> | 
+</p>
+
+基于 Web 技术构建的纯前端交互式雷达仿真系统，模拟美海军宙斯盾作战系统（Aegis Combat System）与 AN/SPY-6(V) 相控阵雷达的功能，具备多目标探测、跟踪、分类、锁定-标定-交战-拦截全流程可视化能力。
 
 ---
 
-## Features
+## 功能特性
 
-### Radar Simulation Core
-- **PPI Display** — 360° rotating sweep line, multi-level range rings, bearing tick marks
-- **Multi-Target Generation** — Air targets (fighters, cruise missiles, UAVs), ballistic missiles (IRBM/MRBM/SRBM), surface vessels
-- **Dynamic Radar Modes** — Volume Search / Surveillance / Precision Track / Fire Control Support
-- **Adaptive Resource Allocation** — SEARCH / TRACK / ENGAGE three-channel power bar with dynamic adjustment
+### 雷达仿真核心
+- **PPI 平面位置指示器** — 360° 旋转扫描线，多级距离环，方位刻度标记
+- **多目标生成与运动模拟** — 空中目标（战斗机、巡航导弹、无人机）、弹道导弹（IRBM/MRBM/SRBM）、水面舰艇
+- **动态雷达模式切换** — 体搜索模式 / 监视模式 / 精确跟踪模式 / 火控支持模式
+- **自适应功率分配** — SEARCH / TRACK / ENGAGE 三通道功率条动态调整
 
-### Fire Control & Engagement
-- **11-Step Engagement Workflow** — SEARCH → DETECT → TRACK → CLASSIFY → LOCK → FIRE CONTROL → WEAPON ASSIGNMENT → ENGAGE → MIDCOURSE GUIDANCE → INTERCEPT → KILL ASSESSMENT
-- **Designate for Engagement** — Two-phase confirmation process mirroring real Aegis combat logic
-- **Weapon Assignment & Intercept** — SM-6 missile launch, midcourse guidance, terminal intercept visualization
-- **Predicted Intercept Point (PIP)** — Real-time calculation and display of predicted intercept points
+### 火控与交战流程
+- **11 步完整交战工作流** — SEARCH → DETECT → TRACK → CLASSIFY → LOCK → FIRE CONTROL → WEAPON ASSIGNMENT → ENGAGE → MIDCOURSE GUIDANCE → INTERCEPT → KILL ASSESSMENT
+- **目标标定 (DESIGNATE FOR ENGAGEMENT)** — 贴近真实宙斯盾作战逻辑的双阶段确认流程
+- **武器分配与拦截** — SM-6 导弹发射、中段制导、终端拦截可视化
+- **预测拦截点 (PIP)** — 实时计算并显示预测拦截点
 
-### Visual & Interaction
-- **Dark Navy-Themed UI** — Professional military console visual design
-- **Target Lock Animation** — Pulsing lock box, track history trails, predicted flight path
-- **Threat Alert System** — Top threat banner, tiered alert list, threat-level color coding
-- **Target Status Dashboard** — Four-panel display: track info, kinematics, engagement, threat assessment
+### 视觉与交互
+- **深色海军风格 UI** — 专业军用控制台视觉设计
+- **目标锁定动画** — 脉冲锁定框、航迹历史轨迹、预测飞行路径
+- **威胁告警系统** — 顶部威胁横幅、分级告警列表、威胁等级颜色编码
+- **目标状态仪表板** — 航迹信息、运动学信息、交战信息、威胁评估四段式面板
 
-### Audio Feedback
-- **Procedural Sound Generation** — Web Audio API OscillatorNode based, zero audio files required
-- **5 Core Sound Types** — Alert beep, lock tone, missile launch, intercept explosion, radar pulse
-- **Global Mute Control** — One-click mute toggle in the top-right corner
+### 音频反馈
+- **程序化音效生成** — 基于 Web Audio API OscillatorNode，无需任何音频文件
+- **5 类核心音效** — 告警蜂鸣、锁定提示音、导弹发射音、拦截爆炸音、雷达脉冲音
+- **全局静音控制** — 右上角一键静音切换
 
 ---
 
-## Quick Start
+## 快速开始
 
-### Prerequisites
+### 前置要求
 
-- A modern browser (Chrome / Firefox / Edge latest version). No backend or build tools required.
+- 现代浏览器（Chrome / Firefox / Edge 最新版），无需任何后端或构建工具
 
-### Running
+### 运行方式
 
 ```bash
-# Option 1: Open directly (recommended)
-# Open index.html in your browser
+# 方式一：直接打开（推荐）
+# 在浏览器中打开 index.html 即可
 
-# Option 2: Local HTTP server
+# 方式二：本地 HTTP 服务器
 python -m http.server 8080 --directory .
-# Visit http://localhost:8080
+# 访问 http://localhost:8080
 
-# Option 3: Node.js
+# 方式三：Node.js
 npx serve .
 ```
 
-> **Note:** Due to browser autoplay policies, you may need to click anywhere on the page first to activate the AudioContext for sound effects.
+> **注意：** 由于浏览器自动播放策略，首次使用音效功能可能需要点击页面任意位置激活 AudioContext。
 
 ---
 
-## Usage
+## 操作指南
 
-| Action | Description |
-|--------|-------------|
-| Click a target on the radar canvas | Select target, details shown in right panel |
-| Click **LOCK TARGET** | Lock target, enter fire control tracking mode |
-| Click **DESIGNATE** | Designate target for engagement, assign weapons |
-| Click **FIRE** | Launch missile, begin intercept process |
-| Toggle **SEARCH / TRACK / ENGAGE** | Switch radar operating mode |
-| Drag **Range / Scan Rate** sliders | Adjust detection range and scan rate |
-| Toggle filters | Filter targets by type (air/ballistic/surface) |
-| Click 🔊 top-right | Toggle sound on/off |
-
----
-
-## Tech Stack
-
-| Category | Technology |
-|----------|------------|
-| Rendering | Canvas 2D API |
-| Audio | Web Audio API (OscillatorNode) |
-| Styling | Pure CSS (CSS Variables, Grid, Flexbox) |
-| Logic | Pure JavaScript (ES5-compatible, no framework) |
-| Dependencies | **Zero external dependencies** — single self-contained HTML file |
+| 操作 | 说明 |
+|------|------|
+| 点击雷达画布上的目标 | 选中目标，右侧面板显示详情 |
+| 点击 **LOCK TARGET** | 锁定目标，进入火控跟踪模式 |
+| 点击 **DESIGNATE** | 标定目标用于交战，分配武器 |
+| 点击 **FIRE** | 发射导弹，开始拦截流程 |
+| 切换 **SEARCH / TRACK / ENGAGE** | 切换雷达工作模式 |
+| 拖动 **Range / Scan Rate** 滑块 | 调整探测距离和扫描速率 |
+| 勾选过滤器 | 按类型筛选目标（空中/弹道/水面） |
+| 点击右上角 🔊 | 切换音效开关 |
 
 ---
 
-## Project Structure
+## 技术栈
+
+| 类别 | 技术 |
+|------|------|
+| 渲染 | Canvas 2D API |
+| 音频 | Web Audio API (OscillatorNode) |
+| 样式 | 纯 CSS (CSS Variables, Grid, Flexbox) |
+| 逻辑 | 纯 JavaScript (ES5 兼容，无框架) |
+| 依赖 | **零外部依赖** — 单个 HTML 文件自包含 |
+
+---
+
+## 项目结构
 
 ```
 radar-simulation/
-├── index.html              # Main application (HTML + CSS + JS)
-├── README.md               # Project documentation (English)
-├── README_CN.md            # Project documentation (Chinese)
-├── LICENSE                 # Open source license
-├── CONTRIBUTING.md         # Contribution guidelines
-├── package.json            # Project metadata
-├── .gitignore              # Git ignore rules
+├── index.html              # 主程序（HTML + CSS + JS 单文件）
+├── README.md               # 项目文档（英文）
+├── README_CN.md            # 项目文档（中文）
+├── LICENSE                 # 开源许可证
+├── CONTRIBUTING.md         # 贡献指南
+├── package.json            # 项目元数据
+├── .gitignore              # Git 忽略规则
 └── .github/
     └── workflows/
-        └── ci.yml          # CI/CD workflow
+        └── ci.yml          # CI/CD 工作流
 ```
 
 ---
 
-## Contributing
+## 贡献指南
 
-Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed contribution guidelines and coding standards.
-
----
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+欢迎提交 Issue 和 Pull Request。请参阅 [CONTRIBUTING.md](CONTRIBUTING.md) 了解详细的贡献流程和代码规范。
 
 ---
 
-## Disclaimer
+## 许可证
 
-This project is a simulation system for educational and demonstration purposes only. It contains no classified or real military data. All visuals, parameters, and behaviors are simulated and do not represent the actual performance of any real-world weapon system.
+本项目采用 [MIT License](LICENSE) 开源许可证。
+
+---
+
+## 免责声明
+
+本项目为教育性和演示性用途的仿真系统，不包含任何机密或真实的军事数据。所有视觉效果、参数和行为均为模拟实现，不代表任何真实武器系统的实际性能。
