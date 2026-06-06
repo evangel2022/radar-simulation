@@ -20,6 +20,10 @@
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
 </p>
 
+<p align="center">
+  <img src="radar.png" alt="AN/SPY-6(V) Aegis Combat System Radar Simulation Screenshot" width="90%">
+</p>
+
 ---
 
 A pure-frontend, interactive **Aegis Combat System** simulator built entirely with web standards. It models the U.S. Navy's **AN/SPY-6(V) phased array radar** with end-to-end visualization of multi-target detection, tracking, classification, threat assessment, fire-control lock, weapon assignment, and SM-6 missile intercept. Rendered with **HTML5 Canvas**, sound effects synthesized via **Web Audio API**, zero dependencies — runs as a single HTML file.
@@ -133,8 +137,9 @@ npx serve .
 ```
 radar-simulation/
 ├── index.html                  # Main application (HTML + CSS + JS, self-contained)
-├── README.md                   # 项目文档 (Chinese)
-├── README_EN.md                # Project Documentation (English)
+├── README.md                   # Project Documentation (English)
+├── README_CN.md                # 项目文档 (Chinese)
+├── radar.png                   # Screenshot (PPI radar display)
 ├── LICENSE                     # MIT License
 ├── CONTRIBUTING.md             # Contribution guidelines
 ├── package.json                # Project metadata & npm scripts

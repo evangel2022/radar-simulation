@@ -20,6 +20,10 @@
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs Welcome"></a>
 </p>
 
+<p align="center">
+  <img src="radar.png" alt="AN/SPY-6(V) 宙斯盾作战系统相控阵雷达仿真截图" width="90%">
+</p>
+
 ---
 
 基于 Web 标准技术的纯前端交互式**宙斯盾作战系统 (Aegis Combat System)** 仿真器，完整模拟美海军 **AN/SPY-6(V) 相控阵雷达** 的多目标探测、跟踪、分类、威胁评估、火控锁定、武器分配与导弹拦截全流程。采用 HTML5 Canvas 渲染 PPI 雷达显示，Web Audio API 程序化生成音效，无需任何后端、框架或外部依赖，单个 HTML 文件即可运行。
@@ -133,8 +137,9 @@ npx serve .
 ```
 radar-simulation/
 ├── index.html                  # 主程序（HTML + CSS + JS 单文件自包含）
-├── README.md                   # 项目文档（中文）
-├── README_EN.md                # Project Documentation (English)
+├── README.md                   # Project Documentation (English)
+├── README_CN.md                # 项目文档 (Chinese)
+├── radar.png                   # 截图（PPI 雷达显示）
 ├── LICENSE                     # MIT 开源许可证
 ├── CONTRIBUTING.md             # 贡献指南
 ├── package.json                # 项目元数据与 npm scripts
